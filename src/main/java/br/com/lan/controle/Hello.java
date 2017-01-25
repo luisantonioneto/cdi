@@ -5,6 +5,8 @@ import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import br.com.lan.persistencia.Conexao;
+
 @Named
 @RequestScoped
 public class Hello {
@@ -12,9 +14,13 @@ public class Hello {
 	@Inject
 	private CalculadoraPreco calculadora;
 	
+	@Inject
+	private Conexao conexao;
+	
 	@PostConstruct
-	public void init(){
+	public void init(){		
 		System.out.println("Bean executado");
+		conexao.abrirConexao();
 	}
 	
 	public String getMessage(){

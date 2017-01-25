@@ -7,13 +7,14 @@
         factory="org.jboss.weld.resources.ManagerObjectFactory"/>
         
     <Resource auth="Container" 
-    	driverClassName=""
-    	maxActive="10"
-    	maxIdle="3"
-    	name="jdbc/cdi"
-    	password=""
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	maxActive="100"
+    	maxIdle="30"
+    	maxWait="10000"
+    	name="jdbc/cdi"    	
     	type="javax.sql.DataSource"
-    	url="jdbc:"
-    	uersername="root">    
-    </Resource>
+    	url="jdbc:mysql://localhost:3306/cdi?autoReconnect=true&amp;verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;serverTimezone=UTC"
+    	username="root"
+    	password="root">    
+    </Resource> 
 </Context>
