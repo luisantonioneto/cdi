@@ -7,7 +7,7 @@
         factory="org.jboss.weld.resources.ManagerObjectFactory"/>
         
     <Resource auth="Container" 
-    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	driverClassName="com.mysql.jdbc.Driver"
     	maxIdle="30"
     	name="jdbc/cdi"    	
     	type="javax.sql.DataSource"
